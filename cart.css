@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: poppins;
+	min-height: 100vh;
+	background: no-repeat;
+	background-size: cover;
+	background-position:center;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px;
+  background-color: #462446;
+  color: #fff;
+}
+.nav-links a {
+  color: #fff;
+}
+.logo {
+  font-size: 32px;
+}
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 15px;
+	margin-top: 10px;
+}
+.menu li:hover {
+  background-color: rgba(176, 95, 109, 0.8);
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+.menu li {
+  padding: 5px 20px;
+}
+.services {
+  position: relative; 
+}
+.dropdown {
+  background-color: #6b486b;
+  padding: 1em 0;
+  position: absolute;
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+}
+.dropdown li + li {
+  margin-top: 7px;
+}
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+.dropdown li:hover {
+  background-color: rgba(176, 95, 109, 0.8);
+}
+.services:hover .dropdown {
+  display: block;
+}
+input[type=checkbox] {
+  display: none;
+} 
+.check {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+@media (max-width: 768px) {
+ .menu {
+    display:none;
+    position: absolute;
+    background-color:#462446;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0px;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color:rgba(176, 95, 109, 0.8);
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type=checkbox]:checked ~ .menu {
+    display: block;
+  }
+  .check {
+    display: block;
+  }
+  .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+  .dropdown li:hover {
+    background-color: rgba(176, 95, 109, 0.8);
+  }
+}
+
+#remove-underline{
+	text-decoration: none;
+}
+p{	
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 80px;
+	letter-spacing: 0.001em;
+	color: #462446;	
+	text-align: center;
+}
